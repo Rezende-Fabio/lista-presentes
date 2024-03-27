@@ -16,7 +16,7 @@ section {
     height: 100vh;
 }
 
-h2{
+h2, h5{
     color: #ffffff;
 }
 
@@ -26,6 +26,7 @@ section#inicio {
         url("../img/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .title {
@@ -68,7 +69,14 @@ div.hr hr{
 }
 
 section#lista{
-    background-color: #000000;
+    background:
+        linear-gradient(rgba(4, 4, 14, 0.8), rgb(0, 0, 0, 0.8)),
+        url("../img/background.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: auto !important;
 }
 
 div.list-title{
@@ -77,4 +85,36 @@ div.list-title{
     align-items: center;
     text-align: center;
     margin-bottom: 1rem;
+}
+
+div.card{
+    background-color: #ffffff50;
+}
+
+div.body-card{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.image-card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.image-card img{
+    width: 25%;
+}
+
+div.footer-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
 }
