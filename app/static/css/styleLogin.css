@@ -1,0 +1,9 @@
+main{
+    background-color: #000000;
+}
+
+form.form-card{
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+}

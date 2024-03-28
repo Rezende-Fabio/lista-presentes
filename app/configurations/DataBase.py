@@ -12,3 +12,14 @@ def init_app(app):
         from app.models.Usuario import Usuario
         from app.models.Presente import Presente
         DB.create_all()
+        addUser()
+
+
+def addUser():
+    from app.models.Usuario import Usuario
+
+    user = Usuario.query.filter(Usuario.u_usuario=="ADMIN").first()
+    if not user:
+        usuario = Usuario(usuario="ADMIN", senha="$2b$08$BWzqNPDJYK..lI2vEkGJRezuapJzVGp554LMGtneiNNIIudPa9aSC")
+        DB.session.add(usuario)
+        DB.session.commit()
