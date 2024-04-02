@@ -8,9 +8,9 @@ function adicionarInput(){
     novoInput.classList.add("mb-3");
     novoInput.setAttribute('id', `acomp_${contadorInputs}`);
     novoInput.innerHTML = `
-        <div class="div-cpf col-4">
-            <label for="" class="cpf">Link:</label>
-            <input type="text" class="form-control upper"maxlength="14" tabindex="5" name="cpf_${contadorInputs}" id="link_${contadorInputs}" required>
+        <div class="col">
+            <label>Link:</label>
+            <input type="text" class="form-control upper" tabindex="5" name="link_${contadorInputs}" id="link_${contadorInputs}" required>
         </div>
     `;
 

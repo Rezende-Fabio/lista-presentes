@@ -5,3 +5,5 @@ presenteBlue = Blueprint("presenteBlue", __name__)
 presenteController = PresenteController()
 
 presenteBlue.add_url_rule("/adicionar-presente", "renderAdicionarPresente", presenteController.renderAdicionarPresente, methods=["GET"])
+
+presenteBlue.add_url_rule("/adicionar-presente", "adicionarPresente", presenteController.adicionarPresente, methods=["POST"])
