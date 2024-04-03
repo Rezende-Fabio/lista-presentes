@@ -32,272 +32,35 @@
             </div>
         </section>
 
-        <div class="hr">
-            <hr>
-        </div>
-
         <section id="lista">
-            <div class="container mt-5">
+            <div class="container">
                 <div class="list-title">
                     <h2>Lista de Presentes</h2>
                 </div>
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="card">
-                            <div class="body-card">
-                                <div class="title-card">
-                                    <h5>Rack para TV</h5>
+                    {% if context.presentes | length <= 0  %}
+                        <div class="d-flex justify-content-center mt-3">
+                            <h3>Lista Vazia</h3>
+                        </div>
+                    {% endif %}
+                    {% for presente in context.presentes %}
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                            <div class="card">
+                                <div class="body-card">
+                                    <div class="title-card">
+                                        <h5>{{ presente.titulo }}</h5>
+                                    </div>
+                                    <div class="image-card">
+                                        <img src="data:image/png;base64,{{ presente.imagem }}" alt="Imagem renderizada">
+                                    </div>
                                 </div>
-                                <div class="image-card">
-                                    <img src="{{ url_for('static', filename='img/produto.png') }}" alt="Foto">
+                                <div class="footer-card">
+                                    <button class="btn btn-success">Presentear</button>
                                 </div>
-                            </div>
-                            <div class="footer-card">
-                                <button class="btn btn-success">Presentear</button>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="card">
-                            <div class="body-card">
-                                <div class="title-card">
-                                    <h5>Rack para TV</h5>
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ url_for('static', filename='img/produto.png') }}" alt="Foto">
-                                </div>
-                            </div>
-                            <div class="footer-card">
-                                <button class="btn btn-success">Presentear</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="card">
-                            <div class="body-card">
-                                <div class="title-card">
-                                    <h5>Rack para TV</h5>
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ url_for('static', filename='img/produto.png') }}" alt="Foto">
-                                </div>
-                            </div>
-                            <div class="footer-card">
-                                <button class="btn btn-success">Presentear</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="card">
-                            <div class="body-card">
-                                <div class="title-card">
-                                    <h5>Rack para TV</h5>
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ url_for('static', filename='img/produto.png') }}" alt="Foto">
-                                </div>
-                            </div>
-                            <div class="footer-card">
-                                <button class="btn btn-success">Presentear</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="card">
-                            <div class="body-card">
-                                <div class="title-card">
-                                    <h5>Rack para TV</h5>
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ url_for('static', filename='img/produto.png') }}" alt="Foto">
-                                </div>
-                            </div>
-                            <div class="footer-card">
-                                <button class="btn btn-success">Presentear</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="card">
-                            <div class="body-card">
-                                <div class="title-card">
-                                    <h5>Rack para TV</h5>
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ url_for('static', filename='img/produto.png') }}" alt="Foto">
-                                </div>
-                            </div>
-                            <div class="footer-card">
-                                <button class="btn btn-success">Presentear</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="card">
-                            <div class="body-card">
-                                <div class="title-card">
-                                    <h5>Rack para TV</h5>
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ url_for('static', filename='img/produto.png') }}" alt="Foto">
-                                </div>
-                            </div>
-                            <div class="footer-card">
-                                <button class="btn btn-success">Presentear</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="card">
-                            <div class="body-card">
-                                <div class="title-card">
-                                    <h5>Rack para TV</h5>
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ url_for('static', filename='img/produto.png') }}" alt="Foto">
-                                </div>
-                            </div>
-                            <div class="footer-card">
-                                <button class="btn btn-success">Presentear</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="card">
-                            <div class="body-card">
-                                <div class="title-card">
-                                    <h5>Rack para TV</h5>
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ url_for('static', filename='img/produto.png') }}" alt="Foto">
-                                </div>
-                            </div>
-                            <div class="footer-card">
-                                <button class="btn btn-success">Presentear</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="card">
-                            <div class="body-card">
-                                <div class="title-card">
-                                    <h5>Rack para TV</h5>
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ url_for('static', filename='img/produto.png') }}" alt="Foto">
-                                </div>
-                            </div>
-                            <div class="footer-card">
-                                <button class="btn btn-success">Presentear</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="card">
-                            <div class="body-card">
-                                <div class="title-card">
-                                    <h5>Rack para TV</h5>
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ url_for('static', filename='img/produto.png') }}" alt="Foto">
-                                </div>
-                            </div>
-                            <div class="footer-card">
-                                <button class="btn btn-success">Presentear</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="card">
-                            <div class="body-card">
-                                <div class="title-card">
-                                    <h5>Rack para TV</h5>
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ url_for('static', filename='img/produto.png') }}" alt="Foto">
-                                </div>
-                            </div>
-                            <div class="footer-card">
-                                <button class="btn btn-success">Presentear</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="card">
-                            <div class="body-card">
-                                <div class="title-card">
-                                    <h5>Rack para TV</h5>
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ url_for('static', filename='img/produto.png') }}" alt="Foto">
-                                </div>
-                            </div>
-                            <div class="footer-card">
-                                <button class="btn btn-success">Presentear</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="card">
-                            <div class="body-card">
-                                <div class="title-card">
-                                    <h5>Rack para TV</h5>
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ url_for('static', filename='img/produto.png') }}" alt="Foto">
-                                </div>
-                            </div>
-                            <div class="footer-card">
-                                <button class="btn btn-success">Presentear</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="card">
-                            <div class="body-card">
-                                <div class="title-card">
-                                    <h5>Rack para TV</h5>
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ url_for('static', filename='img/produto.png') }}" alt="Foto">
-                                </div>
-                            </div>
-                            <div class="footer-card">
-                                <button class="btn btn-success">Presentear</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="card">
-                            <div class="body-card">
-                                <div class="title-card">
-                                    <h5>Rack para TV</h5>
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ url_for('static', filename='img/produto.png') }}" alt="Foto">
-                                </div>
-                            </div>
-                            <div class="footer-card">
-                                <button class="btn btn-success">Presentear</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <div class="card">
-                            <div class="body-card">
-                                <div class="title-card">
-                                    <h5>Rack para TV</h5>
-                                </div>
-                                <div class="image-card">
-                                    <img src="{{ url_for('static', filename='img/produto.png') }}" alt="Foto">
-                                </div>
-                            </div>
-                            <div class="footer-card">
-                                <button class="btn btn-success">Presentear</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    {% endfor %}
+                </div> 
             </div>
         </section>
     </main>

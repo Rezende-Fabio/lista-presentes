@@ -16,7 +16,7 @@ section {
     height: 100vh;
 }
 
-h2, h5{
+h2, h3, h5{
     color: #ffffff;
 }
 
@@ -27,6 +27,7 @@ section#inicio {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
 }
 
 .title {
@@ -54,18 +55,6 @@ section#inicio {
         background-position: center;
     }
 
-}
-
-div.hr{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-div.hr hr{
-    width: 70%;
-    background-color: #ffffff;
 }
 
 section#lista{
@@ -108,7 +97,7 @@ div.image-card{
 }
 
 div.image-card img{
-    width: 25%;
+    width: 50%;
 }
 
 div.footer-card{
